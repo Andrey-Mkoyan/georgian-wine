@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Georgian Wine</title>
+</head>
+
+<body>
+    <div id="preloader">
+
+    </div>
+    <div class="main-container">
+        <header id="header">
+            <div class="dropdown" style="display: none;">
+                <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Catalog</a>
+                    <a href="#">Delivery</a>
+                    <a href="#">Collections</a>
+                    <a href="./contact/contact.html">Contacts</a>
+                </div>
+            </div>
+            <div class="container">
+                <button class="catalog btn">Catalog</button>
+                <button class="delivery btn">Delivery</button>
+                <button class="collections btn">Collections</button>
+                <a href="./contact/contact.html"><button class="contacts btn">Contacts</button></a>
+            </div>
+        </header>
+        <section class="first-section">
+            <div id="first-section-bg">
+                <div style="width: 100%; height: 900px; background: rgba(0, 0, 0, 0.5);z-index: 10000;"></div>
+            </div>
+            <div class="first-section-info">
+                <div class="first-section-title">
+                    The best taste is the taste of long-term wine.
+                </div>
+                <div class="horizontal-line"></div>
+                <div class="first-section-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptatem perspiciatis omnis exercitationem sint iusto
+                    molestiae repellendus vel quaerat ipsa magni totam sapiente
+                    ullam obcaecati maiores veritatis repudiandae consequuntur
+                    dolor fugit facilis enim, illum blanditiis suscipit fugiat
+                    voluptate! Doloribus dolores at minus laudantium quia
+                    exercitationem! Quibusdam, iure. Sunt, blanditiis. Error,
+                    amet consequatur? Tempora placeat ipsum expedita, cupiditate
+                    aspernatur quo non enim eos beatae ratione quas accusantium,
+                    vel qui voluptas provident vitae numquam. Temporibus error
+                    tenetur praesentium nihil magnam magni, sapiente ea, deserunt
+                    officiis ipsam vel quibusdam? Officia, repudiandae adipisci
+                    sit debitis consequatur ipsam ullam, minima natus doloribus
+                    eius, quidem facere animi?
+                </div>
+                <div class="first-section-img">
+                    <img src="./assets/first section image.png" alt="img">
+                </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="second-section-container">
+                <div class="second-section-horizontal-line"></div>
+                <div class="second-section-info">
+                    <div class="left">
+                        <div class="second-section-subtitle">
+                            New collections
+                        </div>
+                        <div class="second-section-title">
+                            March 1980 <br>
+                            Harvest of Georgia
+                        </div>
+                        <div class="left-horizontal-line"></div>
+                        <div class="left-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt quod exercitationem qui veritatis aliquid quaerat
+                            eligendi, voluptatibus quae eaque maxime id totam, accusantium
+                            ea, eum eveniet nam eius itaque est?
+                        </div>
+
+                        <div class="left-table">
+                            <img src="./assets/table.png" alt="table">
+                        </div>
+
+                        <div class="left-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt quod exercitationem qui veritatis aliquid quaerat
+                            eligendi, voluptatibus quae eaque maxime id totam, accusantium
+                            ea, eum eveniet nam eius itaque est?
+                        </div>
+
+                        <div class="left-button">
+                            <a href="./catalog/catalog.html"><button>learn more</button></a>
+                        </div>
+
+                    </div>
+                    <div class="right">
+                        <div class="right-top">
+                            <img src="./assets/Rectangle 11.png" alt="img">
+                        </div>
+                        <div class="right-bottom">
+                            <img src="./assets/Rectangle 12.png" alt="img">
+                            <img src="./assets/Rectangle 13.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="second-section-horizontal-line" style="margin-top: 60px;"></div>
+            </div>
+        </section>
+        <section></section>
+        <footer id="footer"></footer>
+
+    </div>
+    <script>
+        let loader = document.getElementById("preloader");
+        let bgImage = document.getElementById("first-section-bg")
+        document.getElementById("myDropdown").classList.toggle("show");
+        let bgImageArray = ['url("../assets/bgc.png")', 'url("../assets/bg2.jpg")', 'url("../assets/bg3.jpg")']
+        let i = 0
+
+        setInterval(() => {
+            i = i % bgImageArray.length
+            bgImage.style.background = bgImageArray[i]
+            i++;
+        }, 5000);
+        setTimeout(() => {
+            loader.style.display = "none"
+        }, 500)
+
+        function myFunction() {
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

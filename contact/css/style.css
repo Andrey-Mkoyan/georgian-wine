@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.contact-info {
+    background: url('../../assets/georgian-wine-cellar-1920x800.jpg') center center/cover no-repeat;
+    height: 100vh;
+    max-width: 100vw;
+    
+}
+#preloader {
+    background: #fff url(../../assets/loader.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+.info {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.main_title {
+    font-size: 55px;
+    line-height: 43px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: white;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+
+}
+.right>input {
+    width: 400px;
+    height: 50px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+}
+::placeholder { 
+    color: white;
+    opacity: 1; 
+}
+.btn {
+    height: 50px;
+    width: 200px;
+    border: 2px solid white;
+    background: rgba(15, 15, 15, 0.2);
+    color: white;
+    cursor: pointer;
+}
+.btn:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 1100px) {
+    .left   {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 620px) {
+   .google-map>iframe {
+    width: 350px !important;
+    height: 200px !important;
+   }
+   .main_title {
+    font-size: 40px;
+   }
+
+   .right>input {
+    width: 350px;
+    height: 50px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+    }
+    .btn {
+        height: 45px;
+        width: 150px;
+        border: 2px solid white;
+        background: rgba(15, 15, 15, 0.2);
+        color: white;
+        cursor: pointer;
+    }
+}
