@@ -112,6 +112,9 @@ footer, header, hgroup, menu, nav, section {
     padding: 5px 10px;
     margin-bottom: 15px;
 }
+.cards:hover {
+    transform: scale(1.05);
+}
 .image>img {
     border-radius: 25px;
 }
