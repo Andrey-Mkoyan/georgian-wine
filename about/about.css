@@ -23,7 +23,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 .about-container {
-    background:url('../assets/Saperavi-harvest-Georgia.jpg') center center/cover no-repeat;
+    background:url('../assets/georgian-wine-cellar-1920x800.jpg') center center/cover no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -109,11 +109,19 @@ footer, header, hgroup, menu, nav, section {
     letter-spacing: 0;
     color: white;
 } 
+.about-info {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .information {
     margin-top: 200px;
     width: 50vw;
     height: 50vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
