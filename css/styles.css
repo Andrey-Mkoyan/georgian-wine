@@ -1,21 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .main-container {
     position: relative;
+    max-width: 100%;
 }
 
 #header {
     position: absolute;
     top: 1%;
-    right: 20%;
-
+    max-width: 100%;
 }
 
 #header>.container {
     display: flex;
+    justify-content: center;
 }
 
 .btn {
@@ -42,12 +82,14 @@
     color: #FFFFFF;
     transition: 0.6s;
 }
-
-.first-section>#first-section-bg {
+.first-section {
     background: url("../assets/bgc.png");
     background-repeat: no-repeat;
     height: 900px;
-    max-width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .first-section-info {
@@ -55,7 +97,9 @@
     top: 130px;
     max-width: 1140px !important;
     height: 550px;
-    left: 398px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 3px solid #C4C4C4;
     padding: 60px 187px;
 }
@@ -71,13 +115,12 @@
 .horizontal-line {
     width: 160px;
     height: 0px;
-    margin: 40px 0 40px 288px;
+    margin: 40px 0 40px 0;
     border: 1px solid #FFFFFF;
 }
 
 .first-section-text {
     max-width: 733px;
-    height: 192px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -89,33 +132,34 @@
 
 .first-section-img {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 
 }
 
-.first-section-img>img {
-    margin-left: 288px;
-}
+
 
 .second-section-container {
-    width: 100%;
-    height: 900px;
+    max-width: 100%;
+    min-height: 900px;
     background: #E6E3C4;
     padding-top: 80px;
     padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .second-section-horizontal-line {
-    width: 1110px;
+    width: 70vw;
     height: 0px;
     border: 1px solid #998431;
-    margin-left: 405px;
     margin-bottom: 60px;
 }
 
 .second-section-info {
     display: flex;
-    margin-left: 405px;
-    height: 758px;
+    min-height: 758px;
 }
 
 .second-section-info>.left {
@@ -226,7 +270,6 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    left: -420px;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -250,8 +293,43 @@
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd;}
   
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+
+@media only screen and (max-width: 1150px) {
+    .first-section-info {
+        padding: 40px 60px;
+        margin: 0 12%;
+    }
+    .dropdown {
+        display: block !important;
+    }
+    .container {
+        display: none !important;
+    }
+    .second-section-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .second-section-info>.left {
+        margin-right: 0;
+        width: 445px;
+    }
+    .first-section {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .first-section-img>img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 885px) {
+    .first-section-img>img {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 620px) {
     .dropdown {
@@ -261,19 +339,46 @@
         display: none !important;
     }
     .first-section-img>img {
-        margin-left: 190px;
-        margin-top: 90px;
-        width: 50px;
+        display: none;
     }
     .first-section-info {
-        width: 455px !important;
-        left: 5px;
-        padding: 55px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70vw!important;
+        padding: 0 15px 35px 15px;
+        height: max-content;
+    }
+    .first-section-title {
+        font-size: 25px;
     }
     .horizontal-line {
-        margin: 40px 0 40px 145px;
+        margin: 20px 0;
     }
-    .second-section {
-        display: none;
+    #header {
+        padding-left: 15px;
+    }
+    .right-top>img {
+        width: 100vw;
+    }
+    .right-bottom {
+        gap:0;
+    }
+    .right-bottom>img {
+        width: 50vw;
+    }
+    .left-table >img{
+        width: 95vw;
+    }
+    .second-section-info>.left {
+        margin-right: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-text {
+        padding-left: 10px;
+        width: 95vw;
     }
 }

@@ -11,11 +11,28 @@
        
     </div>
     <div class="contact_container">
+        <header id="header">
+            <div class="dropdown" style="display: none;">
+                <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../index.html">Main Page</a>
+                    <a href="../contact/contact.html">Catalog</a>
+                    <a href="../about/about.html">About Us</a>
+                    <a href="#">Contacts</a>
+                </div>
+            </div>
+            <div class="container">
+                <a href="../index.html"><button class="catalog btn">Main Page</button></a>
+                <a href="../catalog/catalog.html"><button class="delivery btn">Catalog</button></a>
+                <a href="../about/about.html"><button class="collections btn">About us</button></a>
+                <a href="#" id="contacts"><button class="contacts btn">Contacts</button></a>
+            </div>
+        </header>
         <div class="contact-info">
             <div class="info">
                 <div class="main_title">Contact Us</div>
                 <div class="left" style="margin: 0 auto; display: flex; gap: 40px;">
-                    <div class="google-map" style="width: 100%"><iframe width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                    <div class="google-map" style="width: 100%"><iframe width="360" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
                         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=%20tbilisi%20mall+(Your%20Business%20Name)&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                         <a href="https://www.gps.ie/sport-gps/">hiking gps</a></iframe>
                     </div>
@@ -33,7 +50,16 @@
         let loader = document.getElementById("preloader");
        setTimeout(() => {
         loader.style.display = "none"
-       },500 )
+       },500 );
+       function myFunction() {
+            const container = document.getElementById("myDropdown");
+            if (container.style.display === 'block') {
+                container.style.display = 'none'
+            } else {
+                container.style.display = 'block'
+            }
+        }
+       
     </script>
 </body>
 </html>

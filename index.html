@@ -14,24 +14,25 @@
 
     </div>
     <div class="main-container">
-        <header id="header">
-            <div class="dropdown" style="display: none;">
-                <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="./contact/contact.html">Catalog</a>
-                    <a href="#">Delivery</a>
-                    <a href="#">Collections</a>
-                    <a href="./contact/contact.html">Contacts</a>
+       
+        <section class="first-section" id="first-section">
+            <header id="header">
+                <div class="dropdown" style="display: none;">
+                    <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="./index.html">Main Page</a>
+                        <a href="./contact/contact.html">Catalog</a>
+                        <a href="./about/about.html">About Us</a>
+                        <a href="./contact/contact.html">Contacts</a>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <button class="catalog btn">Catalog</button>
-                <button class="delivery btn">Delivery</button>
-                <button class="collections btn">Collections</button>
-                <a href="./contact/contact.html"><button class="contacts btn">Contacts</button></a>
-            </div>
-        </header>
-        <section class="first-section">
+                <div class="container">
+                    <a href="./index.html"><button class="catalog btn">Main Page</button></a>
+                    <a href="./catalog/catalog.html"><button class="delivery btn">Catalog</button></a>
+                    <a href="./about/about.html"><button class="collections btn">About us</button></a>
+                    <a href="./contact/contact.html"><button class="contacts btn">Contacts</button></a>
+                </div>
+            </header>
             <div id="first-section-bg">
                 <div style="width: 100%; height: 900px; background: rgba(0, 0, 0, 0.5);z-index: 10000;"></div>
             </div>
@@ -116,7 +117,7 @@
     </div>
     <script>
         let loader = document.getElementById("preloader");
-        let bgImage = document.getElementById("first-section-bg")
+        let bgImage = document.getElementById("first-section")
         document.getElementById("myDropdown").classList.toggle("show");
         let bgImageArray = ['url("../assets/bgc.png")', 'url("../assets/bg2.jpg")', 'url("../assets/bg3.jpg")']
         let i = 0
@@ -131,22 +132,13 @@
         }, 500)
 
         function myFunction() {
-        }
-
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+            const container = document.getElementById("myDropdown");
+            if (container.style.display === 'block') {
+                container.style.display = 'none'
+            } else {
+                container.style.display = 'block'
             }
         }
-
     </script>
 </body>
 

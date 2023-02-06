@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./about.css">
+    <title>Georgian Wine</title>
+</head>
+
+<body>
+    <div id="preloader">
+
+    </div>
+    <div class="about-container">
+        <header id="header">
+            <div class="dropdown" style="display: none;">
+                <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../index.html">Main Page</a>
+                    <a href="../contact/contact.html">Catalog</a>
+                    <a href="#">About Us</a>
+                    <a href="../contact/contact.html">Contacts</a>
+                </div>
+            </div>
+            <div class="container">
+                <a href="../index.html"><button class="catalog btn">Main Page</button></a>
+                <a href="../catalog/catalog.html"><button class="delivery btn">Catalog</button></a>
+                <a href="#"><button class="collections btn">About us</button></a>
+                <a href="../contact/contact.html"><button class="contacts btn">Contacts</button></a>
+            </div>
+        </header>
+
+        <div class="about-info">
+            <div class="information">
+                <div class="header">
+                    <h1>About Us</h1>
+                </div>
+                <p>
+                    "Georgian Wine" is the leading chain of specialized stores for
+                    wine beverages in Georgia. We opened our first store in 2013,
+                    and today we are represented by more than 30 shopping facilities
+                    throughout Georgia.
+                </p>
+                <p>
+                    Our main goal is to offer our customers the best service and price
+                    on the widest range of quality beverages.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let loader = document.getElementById("preloader");
+        setTimeout(() => {
+            loader.style.display = "none"
+        }, 500);
+        function myFunction() {
+            const container = document.getElementById("myDropdown");
+            if (container.style.display === 'block') {
+                container.style.display = 'none'
+            } else {
+                container.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>

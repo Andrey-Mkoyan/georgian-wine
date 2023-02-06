@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./catalog.css">
+    <title>Georgian Wine</title>
+</head>
+
+<body>
+    <div id="preloader">
+
+    </div>
+    <div class="catalog-container">
+        <header id="header">
+            <div class="dropdown" style="display: none;">
+                <img onclick="myFunction()" src="/assets/icons8-menu-rounded-50.png" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../index.html">Main Page</a>
+                    <a href="../contact/contact.html">Catalog</a>
+                    <a href="#">About Us</a>
+                    <a href="../contact/contact.html">Contacts</a>
+                </div>
+            </div>
+            <div class="container">
+                <a href="../index.html"><button class="catalog btn">Main Page</button></a>
+                <a href="../catalog/catalog.html"><button class="delivery btn">Catalog</button></a>
+                <a href="#"><button class="collections btn">About us</button></a>
+                <a href="../contact/contact.html"><button class="contacts btn">Contacts</button></a>
+            </div>
+        </header>
+        <div class="cards">
+            <div class="image">
+                <img src="../assets/Khvanchkara2.jpg" alt="wine image">
+            </div>
+            <div class="item-info">
+                <h2>Badagon Kindzmarauli 0.75l</h2>
+                <p>
+                    A naturally semi-sweet wine of protected designation of origin, made from grapes of the Saferavi
+                    variety grown in the microzone of Kindzmarauli in Kakheti. The wine is pomegranate-colored,
+                    characterized by a harmonious velvety taste, with a pleasant sweet finish. The aroma is
+                    distinguished by berries and fruits...
+                </p>
+            </div>
+            <div class="price">
+                <h2>22,50$</h2>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="../assets/Kindzmarauli2.jpg" alt="wine image">
+            </div>
+            <div class="item-info">
+                <h2>Badagon Saperavi 0.75l</h2>
+                <p>
+                    A naturally semi-sweet wine of protected designation of origin, made from grapes of the Saferavi
+                    variety grown in the microzone of Kindzmarauli in Kakheti. The wine is pomegranate-colored,
+                    characterized by a harmonious velvety taste, with a pleasant sweet finish. The aroma is
+                    distinguished by berries and fruits...
+                </p>
+            </div>
+            <div class="price">
+                <h2>20,50$</h2>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="../assets/badagoni_tetri_msrali_rvino_qisi_0750_l_vendoo_1_146593.jpg" alt="wine image">
+            </div>
+            <div class="item-info">
+                <h2>Badagon Qisi 0.75l</h2>
+                <p>
+                    Badagoni Tsinandali Region: Kakheti, Georgia Alcohol content: 12% Aroma: Vegetal tones mingle with
+                    floral and white fruit aromas Taste: Full-bodied, elegant and complex, initially captivating with
+                    tropical fruit aromas that are well balanced with citrus...
+                </p>
+            </div>
+            <div class="price">
+                <h2>28,50$</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let loader = document.getElementById("preloader");
+        setTimeout(() => {
+            loader.style.display = "none"
+        }, 500);
+        function myFunction() {
+            const container = document.getElementById("myDropdown");
+            if (container.style.display === 'block') {
+                container.style.display = 'none'
+            } else {
+                container.style.display = 'block'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
